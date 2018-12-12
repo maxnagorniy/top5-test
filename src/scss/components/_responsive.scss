@@ -1,0 +1,133 @@
+
+@media only screen and (max-width: 992px) {
+  .header__nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -100%;
+    background: #16141A;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a {
+      line-height: 44px;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #fff;
+        transition: all 0.3s ease;
+      }
+      &:hover:before {
+        height: 3px;
+      }
+    }
+  }
+  .header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+  }
+  .form {
+    max-width: 100%;
+  }
+  .footer-nav {
+    a {
+      margin: 0 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .content {
+    margin: 0;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .aside {
+    display: none;
+  }
+  .banner__mobile {
+    display: block;
+  }
+  .banner__desktop {
+    display: none;
+  }
+  .content__list {
+    margin: 0 0 20px;
+    padding: 0 40px 0;
+    li {
+      padding: 0 25px;
+      border-bottom: 1px solid rgba(240, 240, 244, 0.4);
+      font-size: 15px;
+      &:last-child {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .content__list {
+    padding: 0 20px 0;
+  }
+  .content__title {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn.red {
+    border: 0 none;
+    background: transparent;
+    color: #4a90e2;
+    padding: 0 15px;
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: $red;
+    }
+  }
+
+  .footer {
+    padding: 25px 0 30px;
+    &__title {
+      h5 {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+  .form {
+    flex-direction: column;
+    &__input {
+      text-align: center;
+      border-radius: 3px 3px 0 0;
+    }
+    .btn {
+      border-radius: 0 0 3px 3px;
+    }
+  }
+  .footer-nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    a {
+      margin: 0;
+    }
+  }
+}
